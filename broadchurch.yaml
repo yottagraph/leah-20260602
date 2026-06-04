@@ -24,7 +24,7 @@ gateway:
   qs_api_key: "e12e835b3f37ffeeda940ae3d8be49c79d303fa67face7340fc2ee9d9c1ec8d5"
 
 query_server:
-  url: "https://query.pip.prod.g.lovelace.ai"
+  url: ""
   audience: ""
 
 auth:
