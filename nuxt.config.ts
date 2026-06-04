@@ -184,6 +184,10 @@ export default defineNuxtConfig({
         // below is then `agent_engine` and this is unused).
         agentBaseUrl: '',
 
+        // Path to the projected M2M token file (NUXT_M2M_TOKEN_FILE); the
+        // direct in-cluster QS path sends it as the bearer. Empty = proxy path.
+        m2mTokenFile: '',
+
         public: {
             qsApiKey: bcYaml.qsApiKey,
             // App Identity — broadchurch.yaml provides defaults for provisioned projects
@@ -201,6 +205,9 @@ export default defineNuxtConfig({
 
             // Server Configuration
             queryServerAddress: bcYaml.queryServerAddress,
+            // Explicit override to force direct in-cluster QS access; normally
+            // inferred from an in-cluster address (see isQsDirect()).
+            queryServerDirect: false,
 
             // Agent Gateway
             gatewayUrl: bcYaml.gatewayUrl,
